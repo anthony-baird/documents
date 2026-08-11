@@ -66,17 +66,17 @@ is published, the model tries to build each rung of the ladder and gates **each 
 can be withheld while the charged rate stands — which is why a policy routinely carries a sound charged rate
 and no normalized rate. `rate_is_reportable`, the Stage A verdict, says nothing about whether the ladder is
 available.
-{% raw %}
+
 ```mermaid
-flowchart TB
+flowchart TD
   txn["A policy transaction"]
 
   subgraph A["Stage A — is a CHARGED RATE published?"]
     direction TB
-    method["1. rating_method: how was this priced?"]
-    exposure["2. exposure base + divisor resolved?"]
-    basis["3. basis_status: one exposure base, or several?"]
-    gate["4. rate_is_reportable: positive premium & exposure, dominance share met"]
+    method["rating_method: how was this priced?"]
+    exposure["exposure base + divisor resolved?"]
+    basis["basis_status: one exposure base, or several?"]
+    gate["rate_is_reportable: positive premium & exposure, dominance share met"]
     published["CHARGED RATE PUBLISHED"]
     method -->|"flat charge / negotiated / HNO-only / no exposure"| noRate["No charged rate — rate_absence_reason says which"]
     method --> exposure
@@ -98,7 +98,6 @@ flowchart TB
   published --> norm
   published --> man
 ```
-{% endraw %}
 
 **Stage A, test by test.** `rating_method` is how the policy was priced; four methods have no unit to price
 at all — a flat charge, a negotiated premium, hired-and-non-owned auto with no owned vehicles, and no
