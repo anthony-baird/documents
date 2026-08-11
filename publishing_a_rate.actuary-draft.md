@@ -67,6 +67,8 @@ can be withheld while the charged rate stands — which is why a policy routinel
 and no normalized rate. `rate_is_reportable`, the Stage A verdict, says nothing about whether the ladder is
 available.
 
+{% raw %}
+
 ```mermaid
 flowchart TD
   txn["A policy transaction"]
@@ -98,6 +100,7 @@ flowchart TD
   published --> norm
   published --> man
 ```
+{% endraw %}
 
 **Stage A, test by test.** `rating_method` is how the policy was priced; four methods have no unit to price
 at all — a flat charge, a negotiated premium, hired-and-non-owned auto with no owned vehicles, and no
