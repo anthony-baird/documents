@@ -68,7 +68,7 @@ and no normalized rate. `rate_is_reportable`, the Stage A verdict, says nothing 
 available.
 
 ```mermaid
-flowchart TD
+flowchart TB
   txn["A policy transaction"]
 
   subgraph A["Stage A — is a CHARGED RATE published?"]
